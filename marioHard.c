@@ -25,16 +25,17 @@ int main(void)
          // Aqui é o espaço entre as escadas, se tu notar ele está dentro do loop maior.
         printf("  ");
 
-        // Aqui como é uma escada no canto esquerdo, ele tem que no começo criar a # e depois ele tem que colocar os espaços em branco,
-        // No segundo processo ele faz o mesmo mas adiciona duas Hashtags pois em duas interações apenas o i que começa com 0 e agora é um chega no número
-        //E assim sucessivamente, mas este sempre acaba quando chega no 0, afinal é um número inteiro não negativo.
-         
-        for(int l = n; l > 0; l--){
-            if(n - l <= i) {
-                printf("#");
-            } else {
-                printf(" ");
-            }
+        
+       // Aqui a lógica é mais simples pois, a escada necessariamente começa da esquerda, então não precisa calcular os espaços primeiro
+       //Então o L começa como 0 se L for menor i + 1; i++, inicialmente na primeira linha o L vai ser 0 e o i vai ser 1 
+       // Então ele vai imprimi #
+       //Já na segunda execução, o L vai ser 1 que vai ser igual ao I
+       // Então ele pula para próxima linha, assim sucessivamente, e como começa da esquerda não precisa calcular espaço
+       
+       for (int l = 0; l < i + 1; l++)
+        {
+            printf("#");
+        }
         }
 
         printf("\n");

@@ -41,8 +41,6 @@ int main(void)
         // Aqui quebra a linnha
         printf("\n");
 
-
-
     }
 
 
